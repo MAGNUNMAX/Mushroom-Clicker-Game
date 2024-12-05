@@ -67,17 +67,17 @@ const explotionShow = ()=>{                                         //explotion 
 const counterset = ()=>{                                            //time gift
     console.log('timeleft en descuento ' + timeLeft);
     if(click === 41){
-        timeLeft = timeLeft + 6;
+        timeLeft = timeLeft + 8;
         givetime.innerText = 0;
         givetime.innerText = timeLeft;
         console.log('suma 7  ' + timeLeft);
     }else if(click === 80){
-        timeLeft = timeLeft + 4;
+        timeLeft = timeLeft + 5;
         givetime.innerText = 0;
         givetime.innerText = timeLeft;
         console.log('suma 5  ' + timeLeft);
     }else if(click === 130){
-        timeLeft = timeLeft + 3;
+        timeLeft = timeLeft + 4;
         givetime.innerText = 0;
         givetime.innerText = timeLeft;
         console.log('suma 3  ' + timeLeft);
