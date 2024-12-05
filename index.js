@@ -97,7 +97,7 @@ function startClock() {                                             //clock
             } else {
                 clearInterval(timer);
                 growButton.style.display = 'none';
-                lose.style.display ='block';
+                lose.style.display ='block'
                 setTimeout(()=>{window.location.reload();} ,6000);
             }
         }, 1000);
