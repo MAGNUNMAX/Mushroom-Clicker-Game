@@ -57,6 +57,7 @@ const explotionShow = ()=>{                                         //explotion 
         growButton.style.display = 'none';
         startButton.style.display = 'block';
         myprogress.style.display = 'block';
+        lose.style.display ='none';
         move(); 
          setTimeout(()=>{window.location.reload();} ,6000);
     }
@@ -66,6 +67,7 @@ const explotionShow = ()=>{                                         //explotion 
 
 const counterset = ()=>{                                            //time gift
     console.log('timeleft en descuento ' + timeLeft);
+    
     if(click === 41){
         timeLeft = timeLeft + 10;
         givetime.innerText = 0;
