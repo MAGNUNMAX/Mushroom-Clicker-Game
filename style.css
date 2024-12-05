@@ -1,0 +1,330 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: azure; 
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+     "header header header"
+     "leftSide main rigthSide"
+     "footer footer footer";
+     grid-template-columns: 400px 1fr 300px;
+     grid-template-rows: 60px 1fr 30px;
+}
+
+#header{
+    grid-area: header;
+    background-color: rgba(253, 80, 80, 0.911);
+   
+    text-align: center;
+    padding: 10px;
+}
+
+#leftSide{
+    grid-area: leftSide;
+    background-color: #2251e9;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 1;
+}
+
+#main{
+    /* background-image: url(./img/gamebackg.jpg) ; */
+    background-image: url(./img/pradera.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+
+#main{
+    grid-area: main;
+    background-color: rgb(165, 165, 66);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#rigthSide{
+    grid-area: rigthSide ;
+    background-color:#2251e9;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#footer{
+    grid-area: footer;
+    background-color: rgb(156, 34, 45);
+}
+
+#pointContainer{
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(17, 32, 27);
+    
+}
+
+h2{
+    text-align: center;
+    margin-top: 30px;
+}
+p{
+    margin: 30px ;
+}
+
+#timeDisplay{
+    height: 40px;
+    width: 300px;
+    display: grid;
+    grid-template-areas: 
+    "timeText timeNumber textSecond";
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid white;
+    margin: 20px 20px 0px 20px;
+    border-bottom: none;
+   
+}
+
+#timeText{
+    grid-area: timeText;
+   /*  border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    
+}    
+
+#timeNumber{
+    grid-area: timeNumber;
+   /*  border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+   
+}
+
+#textSecond{
+    grid-area: textSecond;
+   /*  border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+ 
+
+
+#givetime{
+    height: 40px;
+    width: 300px;
+    display: grid;
+    grid-template-areas: 
+    "givetext giveNumber giveSecond";
+    grid-template-rows: 1fr 1fr 1fr;
+   border: 1px solid white;
+   margin: 0px 20px 20px 20px;
+   border-top: none;
+}
+
+
+#givetext{
+   
+    grid-area: givetext;
+     /* border: 1px solid white; */
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     margin-top: 10px;
+     
+}
+
+#giveNumber{
+    grid-area:giveNumber;
+    /*  border: 1px solid white; */
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: start;
+     align-items: center;
+     margin-top: 10px ;
+     padding-left: 20px;
+}
+
+#giveSecond{
+    grid-area: giveSecond;
+    /*  border: 1px solid rgb(161, 10, 10); */
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     margin-top: 10px;
+}
+
+
+
+#clickButton{
+    color: rgb(37, 61, 75);
+    width: 200px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+    border: 3px solid red;
+    background-color: rgb(185, 147, 219);
+    font-size: 1rem ;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    
+}
+
+#clickButton:hover{
+    color: red;
+    background-color:rgb(37, 61, 75) ;
+    border: rgb(185, 147, 219);
+}
+
+#footer{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: auto;
+}
+
+#mushroom{
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    display: block ;
+}
+
+#cloud1{                       /*  -----small white -- */
+    width: 100px;
+    position: absolute;
+   bottom: 600px;
+  left: 200px ; 
+    animation: move1 30s linear infinite;
+}
+#cloud2{                     /*  -----blue cloud ---- */
+    width: 200px;
+    position:absolute;
+     bottom: 600px;
+    left: 240px; 
+    animation: move1 25s linear infinite;
+}
+
+#cloud3{                      /*  ------black cloud ---- */
+    width: 200px;
+    position: absolute;
+     bottom: 700px;
+    left: 260px; 
+    animation: move1 35s linear infinite;
+}
+
+#winimg{
+    display: none;
+}
+
+#lose{
+    display: none;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    bottom: 5px ;
+}
+
+
+#explotion{
+    z-index: 1;
+    position: absolute;
+    bottom: 1px;
+    display: none;
+}
+
+#clickButton2{
+   
+    color: rgb(37, 61, 75);
+    width: 200px;
+    height: 40px;
+    margin: 20px 0px  50px 0px;
+    border-radius: 15px;
+    border: 3px solid red;
+    background-color: rgb(185, 147, 219);
+    font-size: 1rem ;
+    font-weight: bold;
+    cursor: pointer;
+    display: block ;
+        
+  
+}
+
+#clickButton2:hover{
+    color: white;
+}
+
+
+#myProgress {
+    display: none;
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
+
+  #rigthSide{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #rulerTitle{
+    text-align: center;
+    border-bottom: solid 3px white ;
+  }
+
+  #rulerText{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:500;
+
+  }
+
+
+
+@keyframes move1{
+    0%{
+        transform: translate(-70px);
+    }
+
+    100%{
+    transform: translate(1400px);
+
+    }
+}
+
+
