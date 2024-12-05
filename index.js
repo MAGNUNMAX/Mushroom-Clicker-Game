@@ -98,7 +98,7 @@ function startClock() {                                             //clock
                 clearInterval(timer);
                 growButton.style.display = 'none';
                 lose.style.display ='block';
-                 setTimeout(()=>{window.location.reload();} ,6000);
+                setTimeout(()=>{window.location.reload();} ,6000);
             }
         }, 1000);
     }
